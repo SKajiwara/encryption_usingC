@@ -16,29 +16,29 @@ void decrypt ( int prand[SIZE], int numberToDecrypt[SIZE] ) {
   for (int i=0; i<SIZE; i++)
     numberToDecrypt[i] = numberToDecrypt[i] ^ prand[i];
 }
-
+void printLoop ( int array[SIZE] ){
+  for(int i=0; i<SIZE; i++)
+    printf("%d ", array[i]);
+}
 
 int main()
 {
-
-  int number[SIZE] = {5,3,2,4,5,6,2,2,3,9}; //edit to SIZE
-  int i, prand[SIZE];
+  int prand[SIZE], number[SIZE] = {5,3,2,4,5,6,2,2,3,9}; //edit to SIZE
 
   printf("Original Value:     ");
-  for(i=0; i<SIZE; i++)
-    printf("%d ", number[i]);
+  printLoop(number);
 
   generatePseudorandom(prand);
   printf("\nPseudorandom Value: ");
-  for(i=0; i<SIZE; i++) printf("%d ", prand[i]);
+  printLoop(prand);
 
   printf("\nEncrypted Value:    ");
   encrypt( prand, number );
-  for(i=0; i<SIZE; i++) printf("%d ", number[i]);
+  printLoop(number);
 
   printf("\nDecrypted Value:    ");
   decrypt( prand, number );
-  for(i=0; i<SIZE; i++) printf("%d ", number[i]);
+  printLoop(number);
 
   return 0;
 }
