@@ -16,5 +16,5 @@ A pseudorandom number generator, also known as a deterministic random bit genera
   1 ```$ gcc main.c -0 main```
   2 ```$ ./main```
 
-### Swap.c
+### Swap.c [file link](https://github.com/SKajiwara/simple_encryption_usingPseudorandom/blob/master/swap.c)
 This is an simple example of Swap function using XOR.
